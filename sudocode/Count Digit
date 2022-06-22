@@ -1,0 +1,41 @@
+Counting how many digit in a number using Recursion.
+Given a number such as "12345" and the goal is to return how many digits are present in this number which is 5.
+With the help of recursion this problem could be solved as follow:
+  1. create a count that takes an integer as an argument which represent the number that is going to be passed by this function
+  2. check if the number is zero then return zero which is the base case.
+  3. Apply the recusion by divding by 10, each time we use the recusion we need check the base case. Store the reuslt in a variable (I named my variable ans)
+              n = 12345  n > 0        1234|5   --> ans = 5
+              n/10 = 1234  n > 0         |
+              n/10 = 123 n > 0        123|4  --> ans = 4 + 1
+              n/10 = 12 n > 0            |
+              n/10 = 1 n > 0          12|3   --> ans = 3
+              n/10 = 0 n == 0         1|2  --> ans = 2
+                                       |
+                                      |1  --> ans = 1
+                                      0  --> ans = 0
+                                      
+ 4. Return the result
+ 5. call the function in main using "cout"
+ 
+ sudocode 
+     count(n)
+     {
+           //base case
+              if( n == 0) return 0;
+              
+           //Recursion
+              ans = count(n/10);
+              
+              return ans + 1;
+     }//end count
+     
+     
+     main()
+     {
+         n = 12345
+         cout << count(n)
+     }
+     
+     --------------Expected Output------
+     5
+         
