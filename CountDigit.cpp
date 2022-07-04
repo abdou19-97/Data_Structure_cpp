@@ -15,7 +15,7 @@ int count(int n)
 	//Calculation
 	return ans + 1;
 
-}
+}//end count
 
 int main()
 {

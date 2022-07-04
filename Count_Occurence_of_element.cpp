@@ -1,4 +1,5 @@
 //Count Occurence of element using Recursion
+//Counting how many times the number found in a given array
 #include <iostream>
 
 using namespace std;
